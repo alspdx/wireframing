@@ -42,10 +42,11 @@ ul {
 }
 
 .wrapper {
-  padding: 20px;
+  padding: 10px;
 }
 
 .masthead {
+  padding: 10px;
   width: 100%;
   overflow: auto;
 }
@@ -61,11 +62,13 @@ ul {
 }
 
 .taglines {
-  padding: 40px 0 0 0;
+  overflow: auto;
+  padding: 30px 10px;
 }
 
 .taglines p {
   font-size: 8vw;
+  display: inline-block;
 }
 
 .blocks {
@@ -74,7 +77,7 @@ ul {
 }
 
 .blocks li {
-  padding: 40px 0 0 0;
+  margin: 10px;
   overflow: auto;
 }
 
@@ -88,9 +91,39 @@ ul {
 }
 
 @media screen and (min-width:768px) {
-
+  .masthead {
+    overflow: hidden;
+  }
+  .masthead h1 {
+    float: left;
+    display: inline;
+    width: 50%;
+  }
+  .masthead ul {
+    margin-top: 30px;
+    transform: translate(0, -50%);
+    font-size: 20px;
+    float: right;
+    width: 50%;
+  }
+  .masthead li {
+    margin:0 10px 0 0;
+  }
+  .blocks li {
+    width: calc(50% - 20px);
+    float: left;
+  }
 }
 
 @media screen and (min-width:1024px) {
-
+  .masthead li {
+    float: right;
+    margin: 0 0 0 10px;
+  }
+  .taglines {
+    text-align: center;
+  }
+  .blocks li {
+    width: calc(25% - 20px);
+  }
 }
